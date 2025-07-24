@@ -69,7 +69,7 @@ Setup instructions will be added once the project reaches a runnable stage.
 
 Developed by:
 - [Mehakar09](https://github.com/mehakar09)  
-- Nidhi
+- https://github.com/Nidhhhiiii
 
 Open to suggestions and feedback. Contributions welcome once we reach a stable version.
 
