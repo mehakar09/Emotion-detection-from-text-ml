@@ -8,6 +8,20 @@ A Machine Learning and Natural Language Processing (NLP) project that classifies
 
 The objective of this project is to build an end-to-end emotion detection system capable of identifying emotions expressed in text. The workflow includes data preprocessing, exploratory data analysis, feature engineering, model training, and performance evaluation.
 
+---
+
+## 📌 Project Status
+
+✅ Data Preprocessing Completed
+
+✅ Exploratory Data Analysis Completed
+
+✅ Model Training and Evaluation Completed
+
+✅ Project Report Completed
+
+⏳ Web Application Deployment Planned
+
 ### Key Features
 
 * Text preprocessing using NLP techniques
@@ -56,20 +70,26 @@ Emotion-detection-from-text-ml
 │   ├── trainingpp.csv
 │   └── testpp.csv
 │
+├── images
+│   ├── emotion_distribution.png
+│   ├── heatmap.png
+│   ├── model_comparison.png
+│   └── linear_svc_results.png
+│
 ├── report
-│   └── Emotion_Detection_Project_Report.docx
+│   └── Emotion_Detection_Project_Report.pdf
 │
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── .gitignore
 ```
-
 ---
 
 ## 📊 Dataset
 
 **Dataset Used:** Emotion Dataset by Parul Pandey
 
-* Source: https://www.kaggle.com/datasets/parulpandey/emotion-dataset
+** Source: [Emotion Dataset by Parul Pandey](https://www.kaggle.com/datasets/parulpandey/emotion-dataset)
 * Total Samples: 15,969
 * Emotion Classes:
 
@@ -123,7 +143,33 @@ The following preprocessing techniques were applied:
 * Proper preprocessing and feature engineering significantly improved classification performance.
 
 ---
+## 📈 Visualizations
 
+### Model Performance Comparison
+
+![Model Comparison](images/model_comparison.png)
+
+Comparison of training and validation accuracy across Naive Bayes, Logistic Regression, Linear SVC, and LSTM models.
+
+### Linear SVC Results
+
+![Linear SVC Results](images/linear_svc_results.png)
+
+Detailed classification report and performance metrics of the Linear SVC model, which achieved 89.4% test accuracy.
+
+### Emotion Distribution
+
+![Emotion Distribution](images/emotion_distribution.png)
+
+Distribution of the six emotion classes present in the dataset.
+
+### Correlation Heatmap
+
+![Heatmap](images/heatmap.png)
+
+Correlation analysis between dataset features used during exploratory data analysis.
+
+---
 ## 🎯 Applications
 
 * Mental Health Monitoring
@@ -150,8 +196,10 @@ Open the notebooks in Jupyter Notebook and run them sequentially.
 
 ## 📄 Project Report
 
-The complete project report is available in the `report` directory of this repository.
+The detailed project report is available in the repository:
 
+- [Project Report](report/Emotion_Detection_From_Text_Report.pdf)
+  
 ---
 
 ## 👥 Team
