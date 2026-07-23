@@ -153,7 +153,7 @@ Comparison of training and validation accuracy across Naive Bayes, Logistic Regr
 
 ### Linear SVC Results
 
-![Linear SVC Results](images/linear_svc_results.png)
+![Linear SVC Results](images/linear_SVC_results.png)
 
 Detailed classification report and performance metrics of the Linear SVC model, which achieved 89.4% test accuracy.
 
@@ -207,7 +207,7 @@ The detailed project report is available in the repository:
 Developed by:
 
 * Mehak Arora
-* Nidhi
+
 
 ---
 
