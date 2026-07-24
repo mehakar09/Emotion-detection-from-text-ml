@@ -8,10 +8,10 @@ from nltk.corpus import stopwords
 import nltk
 
 # Download stopwords if not already present
-nltk.download('stopwords' , quiet= True)
+nltk.download("stopwords", quiet=True)
 
 # Load stopwords
-stop_words = set(stopwords.words('english'))
+stop_words = set(stopwords.words("english"))
 
 # Load saved files
 model = load_model("model/lstm_emotion_model.h5")
@@ -41,10 +41,13 @@ def clean_text(text):
 
 
 def predict_emotion(text):
+    # Clean input text
     cleaned_text = clean_text(text)
 
+    # Convert text to sequence
     sequence = tokenizer.texts_to_sequences([cleaned_text])
 
+    # Pad sequence
     padded = pad_sequences(
         sequence,
         maxlen=MAX_LEN,
@@ -52,16 +55,25 @@ def predict_emotion(text):
         truncating="post"
     )
 
-   prediction = model.predict(padded, verbose=0)
+    # Predict
+    prediction = model.predict(padded, verbose=0)
 
-print("Cleaned text:", cleaned_text)
-print("Sequence:", sequence)
-print("Prediction:", prediction)
+    # Debugging information
+    print("=" * 50)
+    print("Original Text :", text)
+    print("Cleaned Text  :", cleaned_text)
+    print("Sequence      :", sequence)
+    print("Prediction    :", prediction)
+    print("Classes       :", label_encoder.classes_)
+    print("=" * 50)
 
-predicted_index = np.argmax(prediction)
+    # Highest probability class
+    predicted_index = np.argmax(prediction)
 
-emotion = label_encoder.inverse_transform([predicted_index])[0]
+    # Convert index to emotion
+    emotion = label_encoder.inverse_transform([predicted_index])[0]
 
-confidence = float(np.max(prediction))
+    # Confidence score
+    confidence = float(np.max(prediction))
 
     return emotion, confidence, prediction[0]
