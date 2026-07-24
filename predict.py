@@ -52,12 +52,16 @@ def predict_emotion(text):
         truncating="post"
     )
 
-    prediction = model.predict(padded, verbose=0)
+   prediction = model.predict(padded, verbose=0)
 
-    predicted_index = np.argmax(prediction)
+print("Cleaned text:", cleaned_text)
+print("Sequence:", sequence)
+print("Prediction:", prediction)
 
-    emotion = label_encoder.inverse_transform([predicted_index])[0]
+predicted_index = np.argmax(prediction)
 
-    confidence = float(np.max(prediction))
+emotion = label_encoder.inverse_transform([predicted_index])[0]
+
+confidence = float(np.max(prediction))
 
     return emotion, confidence, prediction[0]
