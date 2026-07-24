@@ -8,7 +8,7 @@ from nltk.corpus import stopwords
 import nltk
 
 # Download stopwords if not already present
-nltk.download('stopwords')
+nltk.download('stopwords' , quiet= True)
 
 # Load stopwords
 stop_words = set(stopwords.words('english'))
