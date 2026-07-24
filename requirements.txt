@@ -5,3 +5,6 @@ seaborn
 scikit-learn
 tensorflow
 nltk
+streamlit
+joblib
+h5py
